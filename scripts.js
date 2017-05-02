@@ -9,6 +9,7 @@ fetchnews.send(null);
 // serialize response
 
 fetchnews.onloadend = function () {
+
     if (this.status === 200) {
 
         var responseOld = JSON.stringify(this.response);
@@ -233,6 +234,8 @@ var content = document.querySelector("main>div");
 function makeChanges() {
 
     content.innerHTML = "";
+    fetchnews.open("GET", newsSource, true);
+    fetchnews.send(null);
     fetchnews.onloadend();
     console.log("makeChanges()");
 
