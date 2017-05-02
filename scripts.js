@@ -207,7 +207,7 @@ function getUpdateAnwser(responseOld) {
 
     if (this.status === 200) {
         var responseNew = JSON.stringify(this.response);
-        // var responseNew = "nowykod";
+        //  var responseNew = "nowykod";
 
         if (responseOld === responseNew) {
             console.log("%c nic się nie zmieniło", 'background: #222; color: #bada55');
@@ -232,7 +232,7 @@ var content = document.querySelector("main>div");
 
 function makeChanges() {
 
-    content.innerHTML() = "";
+    content.innerHTML = "";
     fetchnews.onloadend();
     console.log("makeChanges()");
 
