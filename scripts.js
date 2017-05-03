@@ -169,7 +169,11 @@ function getDates(newsObject, articles, dates) {
 
 function getImages(newsObject, articles, images) {
     for (i = 0; i < articles.length; i++) {
-        images[i] = articles[i].urlToImage;
+        // images[i] = articles[i].urlToImage; // basic
+        var image = articles[i].urlToImage
+        image = image.replace(/^http:/ig, "https:");
+        images[i] = image;
+        console.log(image);
     }
 }
 
