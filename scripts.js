@@ -173,7 +173,7 @@ function getImages(newsObject, articles, images) {
         var image = articles[i].urlToImage
         image = image.replace(/^http:/ig, "https:");
         images[i] = image;
-        console.log(image);
+        // console.log(image);
     }
 }
 
